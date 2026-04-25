@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://zudio-infosec.github.io/aniken.github.io/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
