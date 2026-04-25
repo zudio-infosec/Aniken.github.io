@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أنيكن للمطابخ | تصاميم مطابخ فاخرة في الرياض والمملكة العربية السعودية</title>
+  <meta name="description" content="أنيكن للمطابخ — تصاميم مطابخ مخصصة وفاخرة في الرياض وجميع أنحاء المملكة. قياسات مجانية، تركيب احترافي خلال 5-10 أيام. تواصل معنا عبر واتساب.">
+  <meta name="keywords" content="مطابخ سعودية, خزائن مطابخ, تصاميم مطابخ الرياض, مطابخ مخصصة, kitchen cabinets Saudi Arabia, custom kitchen Riyadh, مطابخ فاخرة, تركيب مطابخ الرياض, مطابخ الخرج, مطابخ الدرعية">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Arabic">
+  <meta property="og:title" content="أنيكن للمطابخ | مطابخ فاخرة مخصصة">
+  <meta property="og:description" content="تصاميم مطابخ فاخرة مخصصة في الرياض والمملكة العربية السعودية. قياسات مجانية وتركيب احترافي.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_SA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="أنيكن للمطابخ">
+  <link rel="canonical" href="https://aniken.vercel.app/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "أنيكن للمطابخ",
+    "alternateName": "Aniken Kitchens",
+    "description": "تصاميم مطابخ فاخرة مخصصة في الرياض والمملكة العربية السعودية",
+    "url": "https://aniken.vercel.app",
+    "address": { "@type": "PostalAddress", "addressLocality": "الرياض", "addressCountry": "SA" },
+    "areaServed": ["الرياض","الخرج","الدرعية","المجمعة","الزلفي","الدوادمي","بريدة","عنيزة"],
+    "priceRange": "$$",
+    "openingHours": "Sa-Th 09:00-12:00,16:30-21:30",
+    "serviceType": "Kitchen Cabinet Manufacturing and Installation"
+  }
+  </script>
+  <style>
+    :root {
+      --bg:       #080705;
+      --bg2:      #0e0c09;
+      --bg3:      #131109;
+      --gold:     #C8A96E;
+      --gold-lt:  #E2C990;
+      --cream:    #F5EFE0;
+      --dim:      #A89878;
+      --border:   rgba(200,169,110,0.18);
+      --wa:       #25D366;
+      --ar: 'Cairo', sans-serif;
+      --en: 'Cormorant Garamond', serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ar); background: var(--bg); color: var(--cream); direction: rtl; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; inset-inline: 0; z-index: 1000;
+      padding: 1.4rem 5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      transition: all .4s;
+    }
+    nav.scrolled {
+      background: rgba(8,7,5,.96); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border); padding-block: .85rem;
+    }
+    .logo { text-decoration: none; }
+    .logo-ar { display: block; font-size: 1.7rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .logo-en { display: block; font-family: var(--en); font-size: .68rem; color: var(--dim); letter-spacing: 5px; text-transform: uppercase; margin-top: 2px; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--dim); text-decoration: none; font-size: .88rem; font-weight: 500; transition: color .3s; position: relative; }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; right:0; width:0; height:1px; background:var(--gold); transition:width .3s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--gold) !important; color: var(--bg) !important; padding: .55rem 1.4rem !important; border-radius: 2px; font-weight: 700 !important; }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--gold-lt) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 25px; height: 2px; background: var(--gold); transition: all .3s; display: block; }
+
+    /* ── MOBILE MENU ── */
+    .mob-menu {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: rgba(8,7,5,.98); flex-direction: column;
+      align-items: center; justify-content: center; gap: 2.2rem;
+    }
+    .mob-menu.open { display: flex; }
+    .mob-menu a { font-size: 1.6rem; font-weight: 700; color: var(--cream); text-decoration: none; transition: color .3s; }
+    .mob-menu a:hover { color: var(--gold); }
+    .mob-close { position: absolute; top: 1.5rem; left: 2rem; background: none; border: none; color: var(--gold); font-size: 1.8rem; cursor: pointer; line-height: 1; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh; position: relative;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 40%, #1c1408 0%, #080705 60%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(200,169,110,.035) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(200,169,110,.035) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+    .hero-glow {
+      position: absolute; top: 20%; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,169,110,.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 2rem; max-width: 950px; }
+    .hero-badge {
+      display: inline-block; border: 1px solid var(--border); color: var(--gold);
+      font-size: .72rem; font-weight: 600; letter-spacing: 3px; padding: .4rem 1.3rem;
+      margin-bottom: 2.2rem; text-transform: uppercase;
+      opacity: 0; animation: fadeUp .8s ease .3s forwards;
+    }
+    .hero-h1 {
+      font-size: clamp(3.2rem,9vw,7rem); font-weight: 900; line-height: 1.04;
+      color: var(--cream); margin-bottom: 1.6rem;
+      opacity: 0; animation: fadeUp .9s ease .5s forwards;
+    }
+    .hero-h1 .g { color: var(--gold); }
+    .hero-sub {
+      font-size: clamp(1rem,2vw,1.2rem); font-weight: 300; color: var(--dim);
+      max-width: 560px; margin: 0 auto 3rem; line-height: 1.9;
+      opacity: 0; animation: fadeUp .9s ease .7s forwards;
+    }
+    .hero-btns {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp .9s ease .9s forwards;
+    }
+    .btn-p {
+      background: var(--gold); color: var(--bg); padding: 1rem 2.6rem;
+      border: none; font-family: var(--ar); font-size: 1rem; font-weight: 700;
+      cursor: pointer; text-decoration: none; display: inline-flex; align-items: center;
+      gap: .55rem; transition: all .3s; border-radius: 2px;
+    }
+    .btn-p:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 12px 35px rgba(200,169,110,.3); }
+    .btn-s {
+      background: transparent; color: var(--cream); padding: 1rem 2.6rem;
+      border: 1px solid var(--border); font-family: var(--ar); font-size: 1rem;
+      font-weight: 500; cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: .55rem; transition: all .3s; border-radius: 2px;
+    }
+    .btn-s:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .scroll-hint {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: .5rem;
+      color: var(--dim); font-size: .72rem; opacity: 0;
+      animation: fadeIn 1s ease 1.5s forwards;
+    }
+    .scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse-line 2.5s ease infinite; }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 7rem 5rem; }
+    .label { font-size: .72rem; font-weight: 700; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: .9rem; }
+    .h2 { font-size: clamp(2rem,4vw,3.4rem); font-weight: 800; color: var(--cream); line-height: 1.2; margin-bottom: 1.4rem; }
+    .desc { color: var(--dim); font-size: .98rem; line-height: 1.95; font-weight: 400; }
+    .divider { width: 50px; height: 2px; background: var(--gold); margin: 1.5rem 0; }
+
+    /* ── VIEWER ── */
+    #viewer { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .viewer-wrap { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+
+    /* image box */
+    .main-box {
+      width: 100%; aspect-ratio: 4/3; background: var(--bg3);
+      border-radius: 4px; border: 1px solid var(--border);
+      overflow: hidden; position: relative;
+    }
+    .main-box .ph {
+      width: 100%; height: 100%; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: .8rem;
+      color: var(--dim); font-size: .82rem; text-align: center; padding: 1rem;
+    }
+    .ph-icon { font-size: 3.5rem; opacity: .25; }
+    .angle-badge {
+      position: absolute; bottom: 1rem; right: 1rem;
+      background: rgba(8,7,5,.85); border: 1px solid var(--border);
+      color: var(--gold); padding: .3rem .85rem; font-size: .76rem; font-weight: 700;
+      border-radius: 2px; backdrop-filter: blur(10px);
+    }
+    .thumbs { display: flex; gap: .7rem; margin-top: .9rem; }
+    .thumb {
+      flex: 1; aspect-ratio: 4/3; background: var(--bg3); border-radius: 2px;
+      border: 2px solid transparent; cursor: pointer; transition: all .3s;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: .3rem; color: var(--dim); font-size: .65rem; overflow: hidden;
+    }
+    .thumb:hover { border-color: rgba(200,169,110,.4); transform: translateY(-2px); }
+    .thumb.act { border-color: var(--gold); }
+    .thumb .t-icon { font-size: 1.1rem; opacity: .4; }
+
+    /* swatches */
+    .sw-row { display: flex; gap: .9rem; margin: 1.4rem 0; flex-wrap: wrap; }
+    .sw-g { display: flex; flex-direction: column; align-items: center; gap: .3rem; }
+    .sw {
+      width: 50px; height: 50px; border-radius: 50%; cursor: pointer;
+      border: 3px solid transparent; transition: all .3s; position: relative;
+    }
+    .sw:hover { transform: scale(1.12); }
+    .sw.act { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .sw-white { background: linear-gradient(135deg,#F5F0E8,#E0D8C8); border: 1px solid rgba(255,255,255,.15); }
+    .sw-oak   { background: linear-gradient(135deg,#C4935A,#8C6040); }
+    .sw-black { background: linear-gradient(135deg,#3A3632,#1A1815); }
+    .sw-grey  { background: linear-gradient(135deg,#7A7872,#4A4845); }
+    .sw-lbl { font-size: .72rem; color: var(--dim); }
+    .feat-list { list-style: none; display: flex; flex-direction: column; gap: .9rem; margin: 2rem 0; }
+    .feat-list li { display: flex; align-items: center; gap: .7rem; color: var(--dim); font-size: .92rem; }
+    .feat-list li::before { content:''; width:5px; height:5px; background:var(--gold); border-radius:50%; flex-shrink:0; }
+    .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+    /* ── PROCESS ── */
+    #process { max-width: 1280px; margin: 0 auto; padding: 7rem 5rem; }
+    .proc-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; margin-top: 4rem; position: relative; }
+    .proc-line {
+      position: absolute; top: 24px; right: calc(12.5% + 25px); left: calc(12.5% + 25px);
+      height: 1px; background: linear-gradient(to left, var(--border), var(--gold), var(--border));
+    }
+    .proc-step { text-align: center; position: relative; }
+    .step-num {
+      width: 50px; height: 50px; background: var(--bg2); border: 1px solid var(--gold);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 900; color: var(--gold); margin: 0 auto 1.4rem;
+      position: relative; z-index: 1;
+    }
+    .step-ico { font-size: 2rem; margin-bottom: .8rem; }
+    .step-t { font-size: 1rem; font-weight: 700; color: var(--cream); margin-bottom: .5rem; }
+    .step-d { font-size: .82rem; color: var(--dim); line-height: 1.7; }
+
+    /* ── GALLERY ── */
+    #gallery { background: var(--bg2); border-top: 1px solid var(--border); }
+    .gal-head { display: flex; justify-content: space-between; align-items: flex-end; max-width: 1280px; margin: 0 auto 3rem; flex-wrap: wrap; gap: 1.5rem; }
+    .gal-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; max-width: 1280px; margin: 0 auto; }
+    .gal-card {
+      background: var(--bg3); border-radius: 4px; overflow: hidden;
+      position: relative; cursor: pointer; aspect-ratio: 4/3;
+    }
+    .gal-card:first-child { grid-column: span 2; aspect-ratio: 16/9; }
+    .gal-ph {
+      width: 100%; height: 100%; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: .6rem;
+      color: rgba(200,169,110,.25); font-size: .78rem; transition: all .5s;
+    }
+    .gal-card:hover .gal-ph { transform: scale(1.04); }
+    .gal-ph-icon { font-size: 2.5rem; opacity: .2; }
+    .gal-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(8,7,5,.88), transparent 50%);
+      opacity: 0; transition: opacity .4s;
+      display: flex; align-items: flex-end; padding: 1.4rem;
+    }
+    .gal-card:hover .gal-overlay { opacity: 1; }
+    .gal-ov-inner {}
+    .gal-name { color: var(--cream); font-size: .9rem; font-weight: 700; margin-bottom: .5rem; }
+    .wa-pill {
+      display: inline-flex; align-items: center; gap: .35rem;
+      background: var(--wa); color: #fff; padding: .35rem .9rem;
+      border-radius: 2px; font-size: .75rem; font-weight: 700;
+      text-decoration: none; transition: background .3s;
+    }
+    .wa-pill:hover { background: #1ebe5a; }
+    .gal-more { text-align: center; margin-top: 3rem; max-width: 1280px; margin-inline: auto; }
+
+    /* ── STATS ── */
+    #stats { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem; }
+    .stats-row { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); }
+    .stat-box { padding: 2rem 1.5rem; text-align: center; border-inline-start: 1px solid var(--border); }
+    .stat-box:first-child { border-inline-start: none; }
+    .stat-n { font-size: 3.8rem; font-weight: 900; color: var(--gold); line-height: 1; font-family: var(--en); }
+    .stat-suf { font-size: 2rem; }
+    .stat-l { font-size: .85rem; color: var(--dim); margin-top: .5rem; font-weight: 500; }
+
+    /* ── AREAS ── */
+    #areas { max-width: 1280px; margin: 0 auto; padding: 7rem 5rem; }
+    .areas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .cities-wrap { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 2rem; }
+    .city {
+      border: 1px solid var(--border); color: var(--dim);
+      padding: .45rem 1.1rem; font-size: .82rem; border-radius: 100px; transition: all .3s;
+    }
+    .city.ft { border-color: var(--gold); color: var(--gold); background: rgba(200,169,110,.05); }
+    .city:hover { border-color: var(--gold); color: var(--gold); }
+    .showroom-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 2.5rem; }
+    .showroom-box h3 { font-size: 1.25rem; font-weight: 800; color: var(--cream); margin-bottom: .8rem; }
+    .info-rows { display: flex; flex-direction: column; gap: .8rem; margin: 1.4rem 0; }
+    .info-row { display: flex; align-items: flex-start; gap: .7rem; color: var(--dim); font-size: .88rem; line-height: 1.5; }
+    .info-ico { color: var(--gold); flex-shrink: 0; font-size: 1rem; margin-top: .1rem; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--bg2); border-top: 1px solid var(--border); }
+    .contact-wrap { max-width: 680px; margin: 0 auto; text-align: center; }
+    .contact-wrap .desc { max-width: 100%; margin: 0 auto 3rem; }
+    .cta-stack { display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-top: 2.8rem; }
+    .wa-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .75rem;
+      background: var(--wa); color: #fff; padding: 1.1rem 3rem;
+      font-family: var(--ar); font-size: 1.05rem; font-weight: 700;
+      text-decoration: none; border-radius: 2px; transition: all .3s; width: 100%; max-width: 420px;
+    }
+    .wa-btn:hover { background: #1ebe5a; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(37,211,102,.3); }
+    .em-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .7rem;
+      background: transparent; color: var(--dim); padding: .95rem 3rem;
+      font-family: var(--ar); font-size: .95rem; font-weight: 500;
+      text-decoration: none; border: 1px solid var(--border); border-radius: 2px;
+      transition: all .3s; width: 100%; max-width: 420px;
+    }
+    .em-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .contact-note { font-size: .76rem; color: var(--dim); margin-top: 1.5rem; opacity: .55; }
+
+    /* ── FOOTER ── */
+    footer { padding: 3rem 5rem 2rem; border-top: 1px solid var(--border); }
+    .foot-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .foot-links { display: flex; gap: 2rem; list-style: none; }
+    .foot-links a { font-size: .82rem; color: var(--dim); text-decoration: none; transition: color .3s; }
+    .foot-links a:hover { color: var(--gold); }
+    .foot-copy { font-size: .76rem; color: var(--dim); opacity: .4; }
+
+    /* ── FLOAT WA ── */
+    .float-wa {
+      position: fixed; bottom: 2rem; left: 2rem; width: 62px; height: 62px;
+      background: var(--wa); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4); text-decoration: none;
+      z-index: 999; transition: all .3s; animation: wa-pulse 3s ease infinite;
+    }
+    .float-wa:hover { transform: scale(1.12); box-shadow: 0 8px 30px rgba(37,211,102,.6); }
+    .float-wa svg { width: 30px; height: 30px; fill: #fff; }
+    .float-label {
+      position: absolute; left: 75px; background: var(--bg2);
+      border: 1px solid var(--border); color: var(--cream); font-size: .8rem;
+      padding: .4rem .9rem; border-radius: 2px; white-space: nowrap;
+      opacity: 0; transition: opacity .3s; pointer-events: none;
+      font-family: var(--ar);
+    }
+    .float-wa:hover .float-label { opacity: 1; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp  { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeIn  { from{opacity:0} to{opacity:1} }
+    @keyframes pulse-line { 0%,100%{opacity:1;transform:scaleY(1)} 50%{opacity:.35;transform:scaleY(.75)} }
+    @keyframes wa-pulse { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)} 50%{box-shadow:0 4px 35px rgba(37,211,102,.7)} }
+    .rev { opacity:0; transform:translateY(42px); transition:opacity .85s ease, transform .85s ease; }
+    .rev.vis { opacity:1; transform:translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1100px){
+      section, #process, #areas { padding: 5rem 2.5rem; }
+      nav, footer { padding-inline: 2.5rem; }
+      .viewer-wrap { grid-template-columns:1fr; gap:3rem; }
+      .proc-grid { grid-template-columns:repeat(2,1fr); }
+      .proc-line { display:none; }
+      .stats-row { grid-template-columns:repeat(2,1fr); }
+      .stat-box:nth-child(2) { border-inline-start: 1px solid var(--border); }
+      .stat-box:nth-child(3) { border-inline-start: none; }
+      .areas-grid { grid-template-columns:1fr; }
+      .gal-grid { grid-template-columns:repeat(2,1fr); }
+      .gal-card:first-child { grid-column:span 2; }
+    }
+    @media(max-width:768px){
+      .nav-links { display:none; }
+      .hamburger { display:flex; }
+      .hero-h1 { font-size:2.8rem; }
+      .hero-btns { flex-direction:column; align-items:center; }
+      .btn-p, .btn-s { width:100%; max-width:300px; justify-content:center; }
+      .proc-grid { grid-template-columns:1fr; }
+      .stats-row { grid-template-columns:repeat(2,1fr); }
+      .stat-box:nth-child(3) { border-inline-start:1px solid var(--border); }
+      .gal-grid { grid-template-columns:1fr; }
+      .gal-card:first-child { grid-column:span 1; aspect-ratio:4/3; }
+      .foot-inner { flex-direction:column; text-align:center; }
+      #stats { padding: 4rem 2rem; }
+    }
+    @media(max-width:500px){
+      section, #process, #areas { padding: 4rem 1.5rem; }
+      nav, footer { padding-inline: 1.5rem; }
+      .stat-box { padding:1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMob()">✕</button>
+  <a href="#viewer"  onclick="closeMob()">التصاميم</a>
+  <a href="#process" onclick="closeMob()">كيف نعمل</a>
+  <a href="#gallery" onclick="closeMob()">أعمالنا</a>
+  <a href="#areas"   onclick="closeMob()">مناطق الخدمة</a>
+  <a href="#contact" onclick="closeMob()" style="color:var(--gold)">تواصل معنا</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">
+    <span class="logo-ar">أنيكن</span>
+    <span class="logo-en">Aniken Kitchens</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#viewer">التصاميم</a></li>
+    <li><a href="#process">كيف نعمل</a></li>
+    <li><a href="#gallery">أعمالنا</a></li>
+    <li><a href="#areas">مناطق الخدمة</a></li>
+    <li><a href="#contact" class="nav-cta">تواصل معنا</a></li>
+  </ul>
+  <div class="hamburger" onclick="openMob()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">صناعة احترافية · قياس مجاني · تركيب في 5-10 أيام</div>
+    <h1 class="hero-h1">
+      مطبخك يستحق<br><span class="g">الأفضل</span>
+    </h1>
+    <p class="hero-sub">
+      تصاميم مطابخ مخصصة وفق ذوقك وأبعاد منزلك. نزورك، نأخذ القياسات، ونركّب باحترافية تامة.
+    </p>
+    <div class="hero-btns">
+      <a href="#viewer" class="btn-p">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        استعرض التصاميم
+      </a>
+      <a href="#contact" class="btn-s">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.476 2 2 6.48 2 12.01c0 1.762.46 3.41 1.27 4.84L2.05 22l5.33-1.4c1.38.75 2.96 1.18 4.61 1.18 5.52 0 9.99-4.48 9.99-10.01C22 6.48 17.51 2 11.99 2z"/></svg>
+        تواصل عبر واتساب
+      </a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>اكتشف أكثر</span>
+  </div>
+</section>
+
+<!-- CABINET VIEWER -->
+<section id="viewer">
+  <div class="viewer-wrap">
+    <div class="rev">
+      <div class="main-box" id="mainBox">
+        <div class="ph">
+          <div class="ph-icon">🍳</div>
+          <span id="imgLabel">أبيض ناصع — المنظر الأمامي</span>
+          <span style="font-size:.72rem;opacity:.5">استبدل بصورتك الفعلية هنا</span>
+        </div>
+        <div class="angle-badge" id="angleBadge">أمامي</div>
+      </div>
+      <div class="thumbs">
+        <div class="thumb act" onclick="setAngle(0,this)">
+          <div class="t-icon">🔲</div>
+          <span>أمامي</span>
+        </div>
+        <div class="thumb" onclick="setAngle(1,this)">
+          <div class="t-icon">↔️</div>
+          <span>جانبي</span>
+        </div>
+        <div class="thumb" onclick="setAngle(2,this)">
+          <div class="t-icon">🗄️</div>
+          <span>داخلي</span>
+        </div>
+        <div class="thumb" onclick="setAngle(3,this)">
+          <div class="t-icon">🔍</div>
+          <span>تفاصيل</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rev">
+      <span class="label">عرض المنتج</span>
+      <h2 class="h2" style="margin-bottom:.5rem">مطبخ كلاسيك<br>الفاخر</h2>
+      <div class="divider"></div>
+      <p class="desc">
+        تصميم راقٍ يجمع بين الجمال والعملية. مصنوع من MDF عالي الجودة مع تشطيبات متعددة لتناسب ذوقك وديكور منزلك.
+      </p>
+
+      <div style="margin-top:1.8rem">
+        <p style="font-size:.8rem;color:var(--dim);margin-bottom:.8rem;font-weight:700;letter-spacing:1px">اختر اللون:</p>
+        <div class="sw-row">
+          <div class="sw-g">
+            <div class="sw sw-white act" onclick="setColor('أبيض ناصع',this)"></div>
+            <span class="sw-lbl">أبيض</span>
+          </div>
+          <div class="sw-g">
+            <div class="sw sw-oak" onclick="setColor('خشب أوك',this)"></div>
+            <span class="sw-lbl">أوك</span>
+          </div>
+          <div class="sw-g">
+            <div class="sw sw-black" onclick="setColor('أسود فحمي',this)"></div>
+            <span class="sw-lbl">أسود</span>
+          </div>
+          <div class="sw-g">
+            <div class="sw sw-grey" onclick="setColor('رمادي بيج',this)"></div>
+            <span class="sw-lbl">رمادي</span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="feat-list">
+        <li>خشب MDF عالي الكثافة مع تشطيب ناعم</li>
+        <li>مفصلات BLUM النمساوية المعتمدة</li>
+        <li>مقاوم للرطوبة والحرارة</li>
+        <li>قياسات مخصصة حسب أبعاد مطبخك</li>
+        <li>ضمان 3 سنوات على التصنيع والتركيب</li>
+      </ul>
+
+      <div class="btn-row">
+        <a href="https://wa.me/966XXXXXXXXX?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20تصميم%20مطبخ%20كلاسيك%20الفاخر" class="btn-p">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.476 2 2 6.48 2 12.01c0 1.762.46 3.41 1.27 4.84L2.05 22l5.33-1.4c1.38.75 2.96 1.18 4.61 1.18 5.52 0 9.99-4.48 9.99-10.01C22 6.48 17.51 2 11.99 2z"/></svg>
+          اطلب هذا التصميم
+        </a>
+        <a href="#gallery" class="btn-s">عرض المزيد</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div style="text-align:center" class="rev">
+    <span class="label">طريقة العمل</span>
+    <h2 class="h2">من الفكرة إلى مطبخك<br>في ٤ خطوات بسيطة</h2>
+  </div>
+  <div class="proc-grid">
+    <div class="proc-line"></div>
+    <div class="proc-step rev">
+      <div class="step-num">١</div>
+      <div class="step-ico">🖥️</div>
+      <div class="step-t">استعرض التصاميم</div>
+      <p class="step-d">تصفح معرضنا واختر التصميم الذي يناسب ذوقك وميزانيتك</p>
+    </div>
+    <div class="proc-step rev">
+      <div class="step-num">٢</div>
+      <div class="step-ico">📱</div>
+      <div class="step-t">تواصل معنا</div>
+      <p class="step-d">راسلنا عبر واتساب وأرسل التصميم الذي أعجبك</p>
+    </div>
+    <div class="proc-step rev">
+      <div class="step-num">٣</div>
+      <div class="step-ico">📐</div>
+      <div class="step-t">نزورك مجاناً</div>
+      <p class="step-d">يأتي فريقنا لمنزلك لأخذ القياسات الدقيقة بدون أي تكلفة</p>
+    </div>
+    <div class="proc-step rev">
+      <div class="step-num">٤</div>
+      <div class="step-ico">🚚</div>
+      <div class="step-t">تسليم وتركيب</div>
+      <p class="step-d">خلال 5 إلى 10 أيام عمل نسلّم ونركّب مطبخك باحترافية تامة</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gal-head rev">
+    <div>
+      <span class="label">معرض الأعمال</span>
+      <h2 class="h2">تصاميمنا<br>تتحدث عنا</h2>
+    </div>
+    <p class="desc" style="max-width:280px;text-align:right">كل مطبخ قصة نجاح. ستُضاف صورك الفعلية هنا قريباً.</p>
+  </div>
+  <div class="gal-grid">
+    <div class="gal-card rev">
+      <div class="gal-ph">
+        <div class="gal-ph-icon">🍳</div>
+        <span>مطبخ كلاسيك أبيض — الرياض</span>
+      </div>
+      <div class="gal-overlay">
+        <div class="gal-ov-inner">
+          <div class="gal-name">مطبخ كلاسيك أبيض</div>
+          <a href="https://wa.me/966XXXXXXXXX?text=أريد%20تصميم%20مشابه%20للمطبخ%20الأبيض" class="wa-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.476 2 2 6.48 2 12.01c0 1.762.46 3.41 1.27 4.84L2.05 22l5.33-1.4c1.38.75 2.96 1.18 4.61 1.18 5.52 0 9.99-4.48 9.99-10.01C22 6.48 17.51 2 11.99 2z"/></svg>
+            أريد هذا التصميم
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="gal-card rev">
+      <div class="gal-ph" style="background:linear-gradient(135deg,#1a1408,#0d0b07)">
+        <div class="gal-ph-icon">🪵</div>
+        <span>مطبخ خشب أوك الطبيعي</span>
+      </div>
+      <div class="gal-overlay">
+        <div class="gal-ov-inner">
+          <div class="gal-name">مطبخ خشب أوك</div>
+          <a href="https://wa.me/966XXXXXXXXX?text=أريد%20تصميم%20مطبخ%20خشب%20أوك" class="wa-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.476 2 2 6.48 2 12.01c0 1.762.46 3.41 1.27 4.84L2.05 22l5.33-1.4c1.38.75 2.96 1.18 4.61 1.18 5.52 0 9.99-4.48 9.99-10.01C22 6.48 17.51 2 11.99 2z"/></svg>
+            أريد هذا التصميم
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="gal-card rev">
+      <div class="gal-ph" style="background:linear-gradient(135deg,#111010,#080807)">
+        <div class="gal-ph-icon">🖤</div>
+        <span>مطبخ أسود فاخر</span>
+      </div>
+      <div class="gal-overlay">
+        <div class="gal-ov-inner">
+          <div class="gal-name">مطبخ أسود فاخر</div>
+          <a href="https://wa.me/966XXXXXXXXX?text=أريد%20تصميم%20مطبخ%20أسود%20فاخر" class="wa-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.476 2 2 6.48 2 12.01c0 1.762.46 3.41 1.27 4.84L2.05 22l5.33-1.4c1.38.75 2.96 1.18 4.61 1.18 5.52 0 9.99-4.48 9.99-10.01C22 6.48 17.51 2 11.99 2z"/></svg>
+            أريد هذا التصميم
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="gal-card rev">
+      <div class="gal-ph" style="background:linear-gradient(135deg,#18160f,#0c0b08)">
+        <div class="gal-ph-icon">🏠</div>
+        <span>مطبخ بيج رمادي عصري</span>
+      </div>
+      <div class="gal-overlay">
+        <div class="gal-ov-inner">
+          <div class="gal-name">مطبخ بيج رمادي</div>
+          <a href="https://wa.me/966XXXXXXXXX?text=أريد%20تصميم%20مطبخ%20بيج%20رمادي" class="wa-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.476 2 2 6.48 2 12.01c0 1.762.46 3.41 1.27 4.84L2.05 22l5.33-1.4c1.38.75 2.96 1.18 4.61 1.18 5.52 0 9.99-4.48 9.99-10.01C22 6.48 17.51 2 11.99 2z"/></svg>
+            أريد هذا التصميم
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gal-more rev" style="margin-top:3rem">
+    <a href="https://wa.me/966XXXXXXXXX?text=أريد%20مشاهدة%20المزيد%20من%20تصاميم%20المطابخ" class="btn-s">
+      استعرض جميع التصاميم عبر واتساب ←
+    </a>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-row">
+    <div class="stat-box rev">
+      <div class="stat-n" data-target="15">0</div>
+      <div class="stat-l">سنة خبرة في الصناعة</div>
+    </div>
+    <div class="stat-box rev">
+      <div class="stat-n"><span class="counter" data-target="500">0</span><span class="stat-suf">+</span></div>
+      <div class="stat-l">مشروع منجز في المملكة</div>
+    </div>
+    <div class="stat-box rev">
+      <div class="stat-n">5-10</div>
+      <div class="stat-l">أيام من القياس للتركيب</div>
+    </div>
+    <div class="stat-box rev">
+      <div class="stat-n">100<span class="stat-suf">%</span></div>
+      <div class="stat-l">ضمان الرضا والجودة</div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section id="areas">
+  <div class="areas-grid">
+    <div class="rev">
+      <span class="label">مناطق الخدمة</span>
+      <h2 class="h2">نصل إلى<br>كل مدينة</h2>
+      <div class="divider"></div>
+      <p class="desc">نقدم خدماتنا في الرياض وجميع المدن المجاورة. مدينتك ليست في القائمة؟ تواصل معنا وسنؤكد الخدمة.</p>
+      <div class="cities-wrap">
+        <span class="city ft">الرياض</span>
+        <span class="city ft">الدرعية</span>
+        <span class="city ft">الخرج</span>
+        <span class="city ft">المجمعة</span>
+        <span class="city">الزلفي</span>
+        <span class="city">الدوادمي</span>
+        <span class="city">القويعية</span>
+        <span class="city">حوطة بني تميم</span>
+        <span class="city">وادي الدواسر</span>
+        <span class="city">بريدة</span>
+        <span class="city">عنيزة</span>
+        <span class="city" style="border-style:dashed">+ مدن أخرى</span>
+      </div>
+    </div>
+    <div class="rev">
+      <div class="showroom-box">
+        <h3>🏪 زيارة معرضنا</h3>
+        <p class="desc" style="font-size:.88rem;margin-bottom:0">لا تريد الانتظار؟ زر معرضنا وشاهد التصاميم على أرض الواقع. فريقنا جاهز لمساعدتك.</p>
+        <div class="info-rows">
+          <div class="info-row">
+            <span class="info-ico">📍</span>
+            <span>الرياض، المملكة العربية السعودية<br><small style="opacity:.5">سيتم تحديث العنوان التفصيلي قريباً</small></span>
+          </div>
+          <div class="info-row">
+            <span class="info-ico">🕐</span>
+            <span>السبت – الخميس: ٩ص – ١٢م ثم ٤:٣٠م – ٩:٣٠م</span>
+          </div>
+          <div class="info-row">
+            <span class="info-ico">📱</span>
+            <span>تواصل معنا قبل الزيارة لتأكيد الموعد</span>
+          </div>
+        </div>
+        <a href="https://wa.me/966XXXXXXXXX?text=أريد%20حجز%20موعد%20لزيارة%20المعرض" class="btn-p" style="width:100%;justify-content:center">
+          احجز موعد زيارة المعرض
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-wrap rev">
+    <span class="label">تواصل معنا</span>
+    <h2 class="h2">جاهزون لتحويل<br>مطبخك اليوم</h2>
+    <div class="divider" style="margin-inline:auto"></div>
+    <p class="desc">راسلنا الآن وأخبرنا عن حلمك. نرد خلال دقائق ونرسل لك تصاميم تناسبك. الاستشارة مجانية والقياس مجاني.</p>
+    <div class="cta-stack">
+      <a href="https://wa.me/966XXXXXXXXX?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20تصاميم%20المطابخ" class="wa-btn" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.476 2 2 6.48 2 12.01c0 1.762.46 3.41 1.27 4.84L2.05 22l5.33-1.4c1.38.75 2.96 1.18 4.61 1.18 5.52 0 9.99-4.48 9.99-10.01C22 6.48 17.51 2 11.99 2z"/></svg>
+        تواصل عبر واتساب الآن
+      </a>
+      <a href="mailto:info@aniken.sa" class="em-btn">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@aniken.sa
+      </a>
+    </div>
+    <p class="contact-note">الرد خلال ساعات العمل · الاستشارة والقياس مجاناً بالكامل</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <a href="#" class="logo">
+      <span class="logo-ar" style="font-size:1.4rem">أنيكن</span>
+      <span class="logo-en">Aniken Kitchens · الرياض، المملكة العربية السعودية</span>
+    </a>
+    <ul class="foot-links">
+      <li><a href="#viewer">التصاميم</a></li>
+      <li><a href="#process">كيف نعمل</a></li>
+      <li><a href="#gallery">أعمالنا</a></li>
+      <li><a href="#areas">مناطق الخدمة</a></li>
+      <li><a href="#contact">تواصل</a></li>
+    </ul>
+    <p class="foot-copy">© 2025 أنيكن للمطابخ — جميع الحقوق محفوظة</p>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/966XXXXXXXXX?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20تصاميم%20المطابخ" class="float-wa" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+  <span class="float-label">تحدث معنا الآن</span>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.476 2 2 6.48 2 12.01c0 1.762.46 3.41 1.27 4.84L2.05 22l5.33-1.4c1.38.75 2.96 1.18 4.61 1.18 5.52 0 9.99-4.48 9.99-10.01C22 6.48 17.51 2 11.99 2z"/></svg>
+</a>
+
+<script>
+  // NAV
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+
+  // MOBILE MENU
+  function openMob() { document.getElementById('mobMenu').classList.add('open'); }
+  function closeMob() { document.getElementById('mobMenu').classList.remove('open'); }
+
+  // SCROLL REVEAL
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('vis'), i * 70);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.rev').forEach(el => obs.observe(el));
+
+  // COUNTER
+  const cObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = +el.dataset.target;
+      let cur = 0;
+      const inc = target / 55;
+      const t = setInterval(() => {
+        cur = Math.min(cur + inc, target);
+        el.textContent = Math.floor(cur);
+        if (cur >= target) clearInterval(t);
+      }, 22);
+      cObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-target]').forEach(el => cObs.observe(el));
+
+  // VIEWER — COLOR
+  let activeColor = 'أبيض ناصع';
+  let activeAngle = 'أمامي';
+  const angles = ['أمامي','جانبي','داخلي','تفاصيل'];
+
+  function setColor(name, el) {
+    document.querySelectorAll('.sw').forEach(s => s.classList.remove('act'));
+    el.classList.add('act');
+    activeColor = name;
+    updateLabel();
+  }
+  function setAngle(idx, el) {
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('act'));
+    el.classList.add('act');
+    activeAngle = angles[idx];
+    document.getElementById('angleBadge').textContent = activeAngle;
+    updateLabel();
+  }
+  function updateLabel() {
+    document.getElementById('imgLabel').textContent = activeColor + ' — المنظر ' + activeAngle;
+  }
+
+  // SMOOTH SCROLL for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
